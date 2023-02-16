@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o test test.cpp'
+                sh 'g++ -o hello hello.cpp'
             }
         }
 
         stage('Test') {
             steps {
-                sh './test'
+                sh './hello'
             }
         }
 
