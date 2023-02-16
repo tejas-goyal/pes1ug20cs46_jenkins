@@ -4,19 +4,19 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ -o my_program my_program.cpp'
+        sh 'g++ -o test test.cpp'
       }
     }
 
     stage('Test') {
       steps {
-        sh './my_program'
+        sh './test'
       }
     }
 
     stage('Deploy') {
       steps {
-        sh 'rsync -avz my_program user@server:/path/to/destination'
+        sh 'rsync -avz test user@server:/path/to/destination'
       }
     }
   }
